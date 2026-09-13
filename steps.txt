@@ -16,4 +16,4 @@ server bnana hai - express use kr ke
 11. same cheez da eek hor tareeka hai using middleware 
     app.use(express.static(path.resolve('./public')));
     res.sendFile('index.html');
-12. 
+12. now 
