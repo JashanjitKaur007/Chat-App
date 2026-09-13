@@ -1,0 +1,19 @@
+npm i express
+
+server bnana hai - express use kr ke
+1. index.js file 
+2. add express 
+3. make server
+4. add router
+5. menu bar bar PS C:\Users\jasha\Desktop\Chat App> node index.js krna pe reha
+6. mai dev dependency install kra ga npm i -D nodemon (as a dev dependency)
+    add to scripts, run -> npm run dev 
+7. hun aapa nu server nal kam krna tain http nu install krna pena
+8. server create kita te aapna app pa ta 
+    pehla aapa seeda aap nal hee km kr rahe c bina http server bna ke , but hun aapa websocket nal kam krna tain server bnana pena 
+9. adding html file taki frontend ch vi thora pta chale ki ho reha
+10. res.send ch file penjn li vi html file show kro tain sendFile use kro + give absolute path - path.join(__dirname, 'folder/file');
+11. same cheez da eek hor tareeka hai using middleware 
+    app.use(express.static(path.resolve('./public')));
+    res.sendFile('index.html');
+12. 

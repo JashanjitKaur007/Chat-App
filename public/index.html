@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+<body>
+    <h1>Welcome to the Chat App</h1>
+    <input id="msgInput" type="text"
+    placeholder = "Enter your message">
+    <button id="sendBtn">Send</button>
+
+    <div id="msgBox"></div>
+
+    <!-- <script>
+        console.log('hello i am frontend'); // console ch he eh
+    </script> -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const msgInput = document.getElementById("msgInput");
+        const sendBtn = document.getElementById("sendBtn");
+        const msgBox = document.getElementById("msgBox");
+
+        sendBtn.addEventListener('click', () => {
+            console.log(msgInput.value);
+            socket.emit("message from frontend", msgInput.value);
+        });
+
+        // SEND data to backend  - jive app ch data send krn li post use krde c eethe emit use krna hai
+        // socket.emit("message from frontend", "hello i am from frontend");
+        
+        // RECIEVE
+        socket.on("message from backend",
+            (backend_toh_recieved_message) => {
+                const p = document.createElement('p');
+                p.textContent = backend_toh_recieved_message;
+                msgBox.appendChild(p);
+                console.log(backend_toh_recieved_message);
+            }
+        );
+    </script>
+
+</body>
+</html>
